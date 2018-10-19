@@ -43,19 +43,15 @@ int main() {
 					int half2 = half/2;
 					for (int i = 0; i < rows; i++) {
 						for (int j = 0; j < cols; j++) {
-							if (j >= half-i && j <= half + i ) {
-								cout<<"*";
-							}
-							else if ((j == half+i || j == half-i) && i <= rows/2) {
-								cout<<"*";
-							} else if (i >= rows/2 && (j == num || j == cols - num - 1)) {
+							if ((j >= half-i && j <= half + i) || (j == half || j == half2)) {
 								cout<<"*";
 							} else {
 								cout<<" ";
 							}
-						}
-					cout<<endl;
 					}
+						cout<<endl;
+					}
+					cout<<endl;
 				}
 				break;
 			case 2: {
@@ -119,6 +115,8 @@ int main() {
 			       }
 				break;
 			case 4:
+				cout<<endl<<"Cerrando programa..."<<endl;
+				opt = 4;
 				break;
 		}
 	} while (opt != 4);
